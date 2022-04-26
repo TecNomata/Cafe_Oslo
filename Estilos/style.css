@@ -1,0 +1,380 @@
+/*Reset CSS*/
+*{
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Fuentes*/
+
+@font-face {
+    font-family: SansB;
+    src: url(../Fuentes/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: SansR;
+    src: url(../Fuentes/OpenSans-Regular.ttf);
+}
+
+/*Estilos de la página*/
+
+body {
+    background-color: #f5f0ed;
+    max-width: 100vw;
+    position: relative;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img.logo {
+    position: absolute;
+    z-index: 0.5;
+    top: 25px;
+    left: 25px;
+    height: 50px;
+}
+
+div.inicio {
+    width: 100%;
+    height: 100vh;
+    background: url(../Img/Fondo1.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.inicio_c {
+    color: #f5f0ed;
+    text-align: center;
+    width: 90%;
+}
+
+div.inicio_c h1 {
+    font-family: SansB;
+    font-size: 40px;
+}
+
+div.separador {
+    width: 40%;
+    border-bottom: solid 4px #f5f0ed;
+    margin: 10% auto;
+}
+
+div.inicio_c p {
+    font-family: SansR;
+    font-size: 16px;
+}
+
+div.contenedor_rb {
+    width: 100%;
+    height: auto;
+}
+
+div.contenedor_rb div{
+    text-align: center;
+    width: 100%;
+    padding: 10% 5%;
+}
+
+div.contenedor_rb div.rojo {
+    color: #ded6c0;
+    background-color: #d03b40;
+}
+
+div.contenedor_rb div.beis {
+    color: #d03b40;
+    background-color: #ded6c0;
+}
+
+div.contenedor_rb div h2 {
+    font-family: SansB;
+    font-size: 28px;
+    margin-bottom: 10%;
+}
+
+div.contenedor_rb div p {
+    font-family: SansR;
+    font-size: 16px;
+}
+
+div.contenedor_rb div a {
+    text-decoration: none;
+    color: inherit;
+    font-family: SansB;
+}
+
+div.promo {
+    width: 100%;
+    background: url(../Img/Fondo2.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: #f5f0ed;
+    padding: 20% 5% 10% 5%;
+}
+
+div.promo h2 {
+    font-family: SansB;
+    font-size: 28px;
+}
+
+div.promo p {
+    font-family: SansR;
+    font-size: 16px;
+}
+
+div.promo a {
+    display: block;
+    font-family: SansR;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    border: solid 4px #f5f0ed;
+    padding: 15px 10px;
+    margin: 10% auto;
+}
+
+div.promo a:hover {
+    background-color: #f5f0ed;
+    color: #3c3c3b;
+    font-family: SansB;
+    box-shadow: 0 0 25px #f5f0ed;
+}
+
+div.contenedor_info {
+    color: #3c3c3b;
+    padding: 15% 5% 10% 5%;
+    width: 100%;
+}
+
+div.contenedor_info div {
+    width: 100%;
+}
+
+div.contenedor_info div img {
+    display: block;
+    margin: 5% auto;
+    height: 25vw;
+}
+
+div.contenedor_info div h3 {
+    font-family: SansB;
+    font-size: 24px;
+}
+
+div.contenedor_info div p {
+    font-family: SansR;
+    font-size: 16px;
+    margin-bottom: 10%;
+    text-align: justify;
+}
+
+footer {
+    color: #f5f0ed;
+    background-color: black;
+    padding: 10% 5%;
+}
+
+footer span {
+    display: none;
+}
+
+/*Estilos de la cortina menú*/
+
+#btn_menu {
+    display: none;
+}
+
+.abrir_menu img {
+    height: 50px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 0.5;
+    cursor: pointer;
+}
+
+#menu_c {
+    background-color: #d03b40;
+    position: fixed;
+    top: 0;
+    width: 0%;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 400ms ease-out;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn_menu:checked ~ #menu_c{
+	width: 100%;
+}
+
+#menu_c nav ul li a {
+    display: block;
+    color: #ded6c0;
+    text-decoration: none;
+    text-align: center;
+    font-family: SansB;
+    font-size: 30px;
+    margin: 7vh auto;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+#menu_c nav ul li a:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+
+#menu_c label {
+    position: absolute;
+    top: 25px;
+	right: 25px;
+	color: #ded6c0;
+    font-family: SansB;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 920px) {
+    img.logo {
+        height: 60px;
+    }
+    div.inicio_c {
+        width: 50%;
+    }
+    div.separador {
+        margin: 5% auto;
+        width: 20%;
+    }
+    div.contenedor_rb {
+        display: flex;
+    }
+    div.contenedor_rb div{
+        width: 50%;
+        padding: 8% 7%;
+    }
+    div.promo {
+        padding: 10% 25%;
+    }
+    div.contenedor_info {
+        overflow: hidden;
+        padding: 5% 0 0 5%;
+    }
+    div.contenedor_info div {
+        width: 45%;
+        float: left;
+        margin: 0 5% 5% 0;
+    }
+    div.contenedor_info div img {
+        display: initial;
+        float: left;
+        margin: 0 5% 0 0;
+        height: 200px;
+    }
+    div.contenedor_info div p {
+        margin-bottom: 0;
+    }
+    footer {
+        padding: 3%;
+    }
+    
+    footer span, footer p {
+        display: inline-block;
+    }
+    footer span {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (min-width: 1361px) {
+    label {
+        display: none;
+    }
+    #menu_c {
+        background-color: initial;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        z-index: 0.5;
+        width: 70%;
+        height: auto;
+        justify-content: right;
+        overflow: initial;
+    }
+    #menu_c nav ul li {
+        display: inline-block;
+    }
+    #menu_c nav ul li a {
+        color: #f5f0ed;
+        font-size: 24px;
+        margin: 25px 60px 0 0;
+    }
+}
